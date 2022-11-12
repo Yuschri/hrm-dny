@@ -29,10 +29,10 @@ class CreatePegawaisTable extends Migration
             $table->boolean('status_akun');
             $table->date('tanggal_gabung');
             $table->date('tanggal_keluar');
-            $table->bigInteger('atasan_id');
-            $table->bigInteger('jabatan_id');
-            $table->bigInteger('departmen_id');
-            $table->bigInteger('cabang_id');
+            $table->bigInteger('atasan_id')->nullable();
+            $table->bigInteger('jabatan_id')->nullable();
+            $table->bigInteger('departmen_id')->nullable();
+            $table->bigInteger('cabang_id')->nullable();
 
             $table->timestamps();
         });
